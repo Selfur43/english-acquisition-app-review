@@ -1,0 +1,13 @@
+PROJECT DUMP MANIFEST
+Project root: C:\Users\ext.fadiguzel\OneDrive - Vibracoustic\Masaüstü\english_acquisition_app_phase1_integrated_final\english_acquisition_app_phase1_integrated
+Generated: 2026-11-02 16:08:00
+Total files: 674
+
+1: files=0, size=195 bytes, name=project_dump_01_root_app_core.txt
+2: files=0, size=195 bytes, name=project_dump_02_shared.txt
+3: files=0, size=195 bytes, name=project_dump_03_features_auth_profile_goals_home.txt
+4: files=0, size=195 bytes, name=project_dump_04_features_learning_practice.txt
+5: files=0, size=195 bytes, name=project_dump_05_features_voice_simulation.txt
+6: files=0, size=195 bytes, name=project_dump_06_features_assessment_evidence.txt
+7: files=0, size=195 bytes, name=project_dump_07_features_remaining.txt
+8: files=0, size=195 bytes, name=project_dump_08_tests_tools_platform.txt
