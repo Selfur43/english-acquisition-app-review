@@ -1,3 +1,479 @@
 PROJECT ROOT: C:\Users\ext.fadiguzel\OneDrive - Vibracoustic\Masaüstü\english_acquisition_app_phase1_integrated_final\english_acquisition_app_phase1_integrated
-GENERATED: 2026-11-02 16:07:59
+GENERATED: 2026-11-02 16:18:34
+
+
+===== FILE: lib/features/assessment/application/controllers/assessment_controller.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentController {}
+
+
+===== FILE: lib/features/assessment/application/use_cases/abandon_assessment.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AbandonAssessment {}
+
+
+===== FILE: lib/features/assessment/application/use_cases/initiate_assessment_appeal.dart =====
+
+// Structural placeholder only. No business logic.
+
+class InitiateAssessmentAppeal {}
+
+
+===== FILE: lib/features/assessment/application/use_cases/load_assessment_result.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadAssessmentResult {}
+
+
+===== FILE: lib/features/assessment/application/use_cases/load_assessment.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadAssessment {}
+
+
+===== FILE: lib/features/assessment/application/use_cases/request_reassessment.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RequestReassessment {}
+
+
+===== FILE: lib/features/assessment/application/use_cases/restore_assessment_attempt.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RestoreAssessmentAttempt {}
+
+
+===== FILE: lib/features/assessment/application/use_cases/save_assessment_draft.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SaveAssessmentDraft {}
+
+
+===== FILE: lib/features/assessment/application/use_cases/start_assessment.dart =====
+
+// Structural placeholder only. No business logic.
+
+class StartAssessment {}
+
+
+===== FILE: lib/features/assessment/application/use_cases/submit_assessment.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SubmitAssessment {}
+
+
+===== FILE: lib/features/assessment/assessment.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentFeature {}
+
+
+===== FILE: lib/features/assessment/data/data_sources/assessment_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class AssessmentLocalDataSource {}
+
+
+===== FILE: lib/features/assessment/data/data_sources/assessment_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class AssessmentRemoteDataSource {}
+
+
+===== FILE: lib/features/assessment/data/models/assessment_attempt_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentAttemptModel {}
+
+
+===== FILE: lib/features/assessment/data/models/assessment_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentModel {}
+
+
+===== FILE: lib/features/assessment/data/models/assessment_response_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentResponseModel {}
+
+
+===== FILE: lib/features/assessment/data/models/assessment_result_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentResultModel {}
+
+
+===== FILE: lib/features/assessment/data/repositories/assessment_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentRepositoryAdapter {}
+
+
+===== FILE: lib/features/assessment/domain/entities/assessment_attempt.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentAttempt {}
+
+
+===== FILE: lib/features/assessment/domain/entities/assessment_response.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentResponse {}
+
+
+===== FILE: lib/features/assessment/domain/entities/assessment_result.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentResult {}
+
+
+===== FILE: lib/features/assessment/domain/entities/assessment_task.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentTask {}
+
+
+===== FILE: lib/features/assessment/domain/entities/assessment.dart =====
+
+// Structural placeholder only. No business logic.
+
+class Assessment {}
+
+
+===== FILE: lib/features/assessment/domain/repositories/assessment_repository.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class AssessmentRepository {}
+
+
+===== FILE: lib/features/assessment/domain/value_objects/assessment_attempt_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum AssessmentAttemptStatus { unspecified }
+
+
+===== FILE: lib/features/assessment/domain/value_objects/assessment_mode.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum AssessmentMode { unspecified }
+
+
+===== FILE: lib/features/assessment/domain/value_objects/assessment_validity_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum AssessmentValidityStatus { unspecified }
+
+
+===== FILE: lib/features/assessment/domain/value_objects/support_condition.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum SupportCondition { unspecified }
+
+
+===== FILE: lib/features/assessment/presentation/pages/assessment_appeal_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentAppealPage {}
+
+
+===== FILE: lib/features/assessment/presentation/pages/assessment_instructions_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentInstructionsPage {}
+
+
+===== FILE: lib/features/assessment/presentation/pages/assessment_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentPage {}
+
+
+===== FILE: lib/features/assessment/presentation/pages/assessment_pending_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentPendingPage {}
+
+
+===== FILE: lib/features/assessment/presentation/pages/assessment_result_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentResultPage {}
+
+
+===== FILE: lib/features/assessment/presentation/routes/assessment_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentRoutes {}
+
+
+===== FILE: lib/features/assessment/presentation/states/assessment_result_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentResultViewState {}
+
+
+===== FILE: lib/features/assessment/presentation/states/assessment_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentViewState {}
+
+
+===== FILE: lib/features/assessment/presentation/widgets/assessment_progress_header.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentProgressHeader {}
+
+
+===== FILE: lib/features/assessment/presentation/widgets/assessment_submission_dialog.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentSubmissionDialog {}
+
+
+===== FILE: lib/features/assessment/presentation/widgets/assessment_task_host.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentTaskHost {}
+
+
+===== FILE: lib/features/assessment/presentation/widgets/assessment_validity_warning.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentValidityWarning {}
+
+
+===== FILE: lib/features/assessment/presentation/widgets/score_interpretation_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ScoreInterpretationCard {}
+
+
+===== FILE: lib/features/evidence/application/controllers/evidence_controller.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceController {}
+
+
+===== FILE: lib/features/evidence/application/use_cases/load_evidence_detail.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadEvidenceDetail {}
+
+
+===== FILE: lib/features/evidence/application/use_cases/load_evidence_history.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadEvidenceHistory {}
+
+
+===== FILE: lib/features/evidence/application/use_cases/load_evidence_set.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadEvidenceSet {}
+
+
+===== FILE: lib/features/evidence/application/use_cases/request_evidence_correction.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RequestEvidenceCorrection {}
+
+
+===== FILE: lib/features/evidence/data/data_sources/evidence_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class EvidenceLocalDataSource {}
+
+
+===== FILE: lib/features/evidence/data/data_sources/evidence_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class EvidenceRemoteDataSource {}
+
+
+===== FILE: lib/features/evidence/data/models/evidence_detail_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceDetailModel {}
+
+
+===== FILE: lib/features/evidence/data/models/evidence_summary_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceSummaryModel {}
+
+
+===== FILE: lib/features/evidence/data/repositories/evidence_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceRepositoryAdapter {}
+
+
+===== FILE: lib/features/evidence/domain/entities/evidence_detail.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceDetail {}
+
+
+===== FILE: lib/features/evidence/domain/entities/evidence_set_summary.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceSetSummary {}
+
+
+===== FILE: lib/features/evidence/domain/entities/evidence_summary.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceSummary {}
+
+
+===== FILE: lib/features/evidence/domain/repositories/evidence_repository.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class EvidenceRepository {}
+
+
+===== FILE: lib/features/evidence/domain/value_objects/evidence_quality.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum EvidenceQuality { unspecified }
+
+
+===== FILE: lib/features/evidence/domain/value_objects/evidence_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum EvidenceStatus { unspecified }
+
+
+===== FILE: lib/features/evidence/domain/value_objects/evidence_support_level.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum EvidenceSupportLevel { unspecified }
+
+
+===== FILE: lib/features/evidence/evidence.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceFeature {}
+
+
+===== FILE: lib/features/evidence/presentation/pages/evidence_detail_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceDetailPage {}
+
+
+===== FILE: lib/features/evidence/presentation/pages/evidence_history_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceHistoryPage {}
+
+
+===== FILE: lib/features/evidence/presentation/pages/evidence_set_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceSetPage {}
+
+
+===== FILE: lib/features/evidence/presentation/routes/evidence_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceRoutes {}
+
+
+===== FILE: lib/features/evidence/presentation/states/evidence_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceViewState {}
+
+
+===== FILE: lib/features/evidence/presentation/widgets/evidence_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceCard {}
+
+
+===== FILE: lib/features/evidence/presentation/widgets/evidence_provenance_view.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceProvenanceView {}
+
+
+===== FILE: lib/features/evidence/presentation/widgets/evidence_status_badge.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceStatusBadge {}
+
+
+===== FILE: lib/features/evidence/presentation/widgets/support_level_indicator.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SupportLevelIndicator {}
 

@@ -1,3 +1,514 @@
 PROJECT ROOT: C:\Users\ext.fadiguzel\OneDrive - Vibracoustic\Masaüstü\english_acquisition_app_phase1_integrated_final\english_acquisition_app_phase1_integrated
-GENERATED: 2026-11-02 16:07:59
+GENERATED: 2026-11-02 16:18:34
+
+
+===== FILE: lib/features/simulation/application/controllers/simulation_controller.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationController {}
+
+
+===== FILE: lib/features/simulation/application/use_cases/conclude_simulation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ConcludeSimulation {}
+
+
+===== FILE: lib/features/simulation/application/use_cases/load_scenario.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadScenario {}
+
+
+===== FILE: lib/features/simulation/application/use_cases/pause_simulation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class PauseSimulation {}
+
+
+===== FILE: lib/features/simulation/application/use_cases/request_simulation_replay.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RequestSimulationReplay {}
+
+
+===== FILE: lib/features/simulation/application/use_cases/resume_simulation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ResumeSimulation {}
+
+
+===== FILE: lib/features/simulation/application/use_cases/send_simulation_response.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SendSimulationResponse {}
+
+
+===== FILE: lib/features/simulation/application/use_cases/start_simulation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class StartSimulation {}
+
+
+===== FILE: lib/features/simulation/application/use_cases/submit_simulation_decision.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SubmitSimulationDecision {}
+
+
+===== FILE: lib/features/simulation/data/data_sources/simulation_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class SimulationLocalDataSource {}
+
+
+===== FILE: lib/features/simulation/data/data_sources/simulation_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class SimulationRemoteDataSource {}
+
+
+===== FILE: lib/features/simulation/data/models/simulation_checkpoint_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationCheckpointModel {}
+
+
+===== FILE: lib/features/simulation/data/models/simulation_session_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationSessionModel {}
+
+
+===== FILE: lib/features/simulation/data/models/simulation_turn_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationTurnModel {}
+
+
+===== FILE: lib/features/simulation/data/repositories/simulation_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationRepositoryAdapter {}
+
+
+===== FILE: lib/features/simulation/domain/entities/participant_summary.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ParticipantSummary {}
+
+
+===== FILE: lib/features/simulation/domain/entities/scenario_summary.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ScenarioSummary {}
+
+
+===== FILE: lib/features/simulation/domain/entities/simulation_document.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationDocument {}
+
+
+===== FILE: lib/features/simulation/domain/entities/simulation_session.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationSession {}
+
+
+===== FILE: lib/features/simulation/domain/entities/simulation_turn.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationTurn {}
+
+
+===== FILE: lib/features/simulation/domain/repositories/simulation_repository.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class SimulationRepository {}
+
+
+===== FILE: lib/features/simulation/domain/value_objects/simulation_mode.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum SimulationMode { unspecified }
+
+
+===== FILE: lib/features/simulation/domain/value_objects/simulation_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum SimulationStatus { unspecified }
+
+
+===== FILE: lib/features/simulation/domain/value_objects/turn_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum TurnStatus { unspecified }
+
+
+===== FILE: lib/features/simulation/presentation/pages/scenario_details_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ScenarioDetailsPage {}
+
+
+===== FILE: lib/features/simulation/presentation/pages/simulation_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationPage {}
+
+
+===== FILE: lib/features/simulation/presentation/pages/simulation_replay_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationReplayPage {}
+
+
+===== FILE: lib/features/simulation/presentation/pages/simulation_result_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationResultPage {}
+
+
+===== FILE: lib/features/simulation/presentation/routes/simulation_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationRoutes {}
+
+
+===== FILE: lib/features/simulation/presentation/states/simulation_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationViewState {}
+
+
+===== FILE: lib/features/simulation/presentation/widgets/participant_header.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ParticipantHeader {}
+
+
+===== FILE: lib/features/simulation/presentation/widgets/scenario_objectives_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ScenarioObjectivesCard {}
+
+
+===== FILE: lib/features/simulation/presentation/widgets/simulation_decision_panel.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationDecisionPanel {}
+
+
+===== FILE: lib/features/simulation/presentation/widgets/simulation_message_bubble.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationMessageBubble {}
+
+
+===== FILE: lib/features/simulation/presentation/widgets/simulation_response_composer.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationResponseComposer {}
+
+
+===== FILE: lib/features/simulation/presentation/widgets/simulation_transcript.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationTranscript {}
+
+
+===== FILE: lib/features/simulation/simulation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationFeature {}
+
+
+===== FILE: lib/features/voice/application/controllers/voice_analysis_controller.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceAnalysisController {}
+
+
+===== FILE: lib/features/voice/application/controllers/voice_recording_controller.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceRecordingController {}
+
+
+===== FILE: lib/features/voice/application/use_cases/delete_voice_recording.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DeleteVoiceRecording {}
+
+
+===== FILE: lib/features/voice/application/use_cases/load_voice_analysis.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadVoiceAnalysis {}
+
+
+===== FILE: lib/features/voice/application/use_cases/pause_voice_recording.dart =====
+
+// Structural placeholder only. No business logic.
+
+class PauseVoiceRecording {}
+
+
+===== FILE: lib/features/voice/application/use_cases/play_voice_recording.dart =====
+
+// Structural placeholder only. No business logic.
+
+class PlayVoiceRecording {}
+
+
+===== FILE: lib/features/voice/application/use_cases/request_voice_analysis.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RequestVoiceAnalysis {}
+
+
+===== FILE: lib/features/voice/application/use_cases/retry_voice_upload.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RetryVoiceUpload {}
+
+
+===== FILE: lib/features/voice/application/use_cases/start_voice_recording.dart =====
+
+// Structural placeholder only. No business logic.
+
+class StartVoiceRecording {}
+
+
+===== FILE: lib/features/voice/application/use_cases/stop_voice_recording.dart =====
+
+// Structural placeholder only. No business logic.
+
+class StopVoiceRecording {}
+
+
+===== FILE: lib/features/voice/application/use_cases/upload_voice_recording.dart =====
+
+// Structural placeholder only. No business logic.
+
+class UploadVoiceRecording {}
+
+
+===== FILE: lib/features/voice/data/data_sources/voice_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class VoiceLocalDataSource {}
+
+
+===== FILE: lib/features/voice/data/data_sources/voice_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class VoiceRemoteDataSource {}
+
+
+===== FILE: lib/features/voice/data/models/voice_analysis_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceAnalysisModel {}
+
+
+===== FILE: lib/features/voice/data/models/voice_recording_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceRecordingModel {}
+
+
+===== FILE: lib/features/voice/data/repositories/voice_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceRepositoryAdapter {}
+
+
+===== FILE: lib/features/voice/domain/entities/voice_analysis.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceAnalysis {}
+
+
+===== FILE: lib/features/voice/domain/entities/voice_recording.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceRecording {}
+
+
+===== FILE: lib/features/voice/domain/repositories/voice_repository.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class VoiceRepository {}
+
+
+===== FILE: lib/features/voice/domain/value_objects/audio_quality_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum AudioQualityStatus { unspecified }
+
+
+===== FILE: lib/features/voice/domain/value_objects/recording_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum RecordingStatus { unspecified }
+
+
+===== FILE: lib/features/voice/domain/value_objects/retention_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum RetentionStatus { unspecified }
+
+
+===== FILE: lib/features/voice/domain/value_objects/upload_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum UploadStatus { unspecified }
+
+
+===== FILE: lib/features/voice/domain/value_objects/voice_analysis_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum VoiceAnalysisStatus { unspecified }
+
+
+===== FILE: lib/features/voice/presentation/pages/voice_analysis_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceAnalysisPage {}
+
+
+===== FILE: lib/features/voice/presentation/pages/voice_recording_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceRecordingPage {}
+
+
+===== FILE: lib/features/voice/presentation/routes/voice_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceRoutes {}
+
+
+===== FILE: lib/features/voice/presentation/states/voice_analysis_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceAnalysisViewState {}
+
+
+===== FILE: lib/features/voice/presentation/states/voice_recording_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceRecordingViewState {}
+
+
+===== FILE: lib/features/voice/presentation/widgets/audio_playback_controls.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AudioPlaybackControls {}
+
+
+===== FILE: lib/features/voice/presentation/widgets/audio_quality_indicator.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AudioQualityIndicator {}
+
+
+===== FILE: lib/features/voice/presentation/widgets/recording_controls.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecordingControls {}
+
+
+===== FILE: lib/features/voice/presentation/widgets/recording_retention_notice.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecordingRetentionNotice {}
+
+
+===== FILE: lib/features/voice/presentation/widgets/recording_timer.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecordingTimer {}
+
+
+===== FILE: lib/features/voice/presentation/widgets/voice_upload_progress.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceUploadProgress {}
+
+
+===== FILE: lib/features/voice/voice.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceFeature {}
 

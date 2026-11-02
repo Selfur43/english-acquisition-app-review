@@ -1,3 +1,906 @@
 PROJECT ROOT: C:\Users\ext.fadiguzel\OneDrive - Vibracoustic\Masaüstü\english_acquisition_app_phase1_integrated_final\english_acquisition_app_phase1_integrated
-GENERATED: 2026-11-02 16:07:59
+GENERATED: 2026-11-02 16:18:34
+
+
+===== FILE: lib/features/learning_plan/application/controllers/learning_plan.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningPlanController {}
+
+
+===== FILE: lib/features/learning_plan/application/use_cases/accept_learning_plan.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AcceptLearningPlan {}
+
+
+===== FILE: lib/features/learning_plan/application/use_cases/load_learning_plan.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadLearningPlan {}
+
+
+===== FILE: lib/features/learning_plan/application/use_cases/pause_learning_plan.dart =====
+
+// Structural placeholder only. No business logic.
+
+class PauseLearningPlan {}
+
+
+===== FILE: lib/features/learning_plan/application/use_cases/refresh_learning_plan.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RefreshLearningPlan {}
+
+
+===== FILE: lib/features/learning_plan/application/use_cases/resume_learning_plan.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ResumeLearningPlan {}
+
+
+===== FILE: lib/features/learning_plan/data/data_sources/learning_plan_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class LearningPlanLocalDataSource {}
+
+
+===== FILE: lib/features/learning_plan/data/data_sources/learning_plan_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class LearningPlanRemoteDataSource {}
+
+
+===== FILE: lib/features/learning_plan/data/models/learning_plan_item.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningPlanItemModel {}
+
+
+===== FILE: lib/features/learning_plan/data/models/learning_plan.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningPlanModel {}
+
+
+===== FILE: lib/features/learning_plan/data/repositories/learning_plan_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningPlanRepositoryAdapter {}
+
+
+===== FILE: lib/features/learning_plan/domain/entities/learning_objective.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningObjective {}
+
+
+===== FILE: lib/features/learning_plan/domain/entities/learning_plan_item.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningPlanItem {}
+
+
+===== FILE: lib/features/learning_plan/domain/entities/learning_plan.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningPlan {}
+
+
+===== FILE: lib/features/learning_plan/domain/repositories/learning_plan.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class LearningPlanRepository {}
+
+
+===== FILE: lib/features/learning_plan/domain/value_objects/activity_type.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum ActivityType { unspecified }
+
+
+===== FILE: lib/features/learning_plan/domain/value_objects/learning_plan_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum LearningPlanStatus { unspecified }
+
+
+===== FILE: lib/features/learning_plan/domain/value_objects/plan_item_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum PlanItemStatus { unspecified }
+
+
+===== FILE: lib/features/learning_plan/learning_plan.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningPlanFeature {}
+
+
+===== FILE: lib/features/learning_plan/presentation/pages/learning_plan_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningPlanPage {}
+
+
+===== FILE: lib/features/learning_plan/presentation/pages/learning_plan_rationale_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningPlanRationalePage {}
+
+
+===== FILE: lib/features/learning_plan/presentation/routes/learning_plan_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningPlanRoutes {}
+
+
+===== FILE: lib/features/learning_plan/presentation/states/learning_plan_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningPlanViewState {}
+
+
+===== FILE: lib/features/learning_plan/presentation/widgets/learning_objective_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningObjectiveCard {}
+
+
+===== FILE: lib/features/learning_plan/presentation/widgets/plan_item_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class PlanItemCard {}
+
+
+===== FILE: lib/features/learning_plan/presentation/widgets/review_schedule_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReviewScheduleCard {}
+
+
+===== FILE: lib/features/learning_session/application/controllers/learning_session.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningSessionController {}
+
+
+===== FILE: lib/features/learning_session/application/use_cases/abandon_learning_session.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AbandonLearningSession {}
+
+
+===== FILE: lib/features/learning_session/application/use_cases/complete_learning_session.dart =====
+
+// Structural placeholder only. No business logic.
+
+class CompleteLearningSession {}
+
+
+===== FILE: lib/features/learning_session/application/use_cases/record_session_reflection.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecordSessionReflection {}
+
+
+===== FILE: lib/features/learning_session/application/use_cases/resume_learning_session.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ResumeLearningSession {}
+
+
+===== FILE: lib/features/learning_session/application/use_cases/save_session_checkpoint.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SaveSessionCheckpoint {}
+
+
+===== FILE: lib/features/learning_session/application/use_cases/start_learning_session.dart =====
+
+// Structural placeholder only. No business logic.
+
+class StartLearningSession {}
+
+
+===== FILE: lib/features/learning_session/data/data_sources/learning_session_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class LearningSessionLocalDataSource {}
+
+
+===== FILE: lib/features/learning_session/data/data_sources/learning_session_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class LearningSessionRemoteDataSource {}
+
+
+===== FILE: lib/features/learning_session/data/models/learning_session.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningSessionModel {}
+
+
+===== FILE: lib/features/learning_session/data/models/session_checkpoint.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SessionCheckpointModel {}
+
+
+===== FILE: lib/features/learning_session/data/repositories/learning_session_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningSessionRepositoryAdapter {}
+
+
+===== FILE: lib/features/learning_session/domain/entities/learning_session.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningSession {}
+
+
+===== FILE: lib/features/learning_session/domain/entities/session_activity.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SessionActivity {}
+
+
+===== FILE: lib/features/learning_session/domain/entities/session_reflection.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SessionReflection {}
+
+
+===== FILE: lib/features/learning_session/domain/repositories/learning_session.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class LearningSessionRepository {}
+
+
+===== FILE: lib/features/learning_session/domain/value_objects/activity_progress.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum ActivityProgress { unspecified }
+
+
+===== FILE: lib/features/learning_session/domain/value_objects/learning_session_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum LearningSessionStatus { unspecified }
+
+
+===== FILE: lib/features/learning_session/learning_session.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningSessionFeature {}
+
+
+===== FILE: lib/features/learning_session/presentation/pages/learning_session_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningSessionPage {}
+
+
+===== FILE: lib/features/learning_session/presentation/pages/session_reflection_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SessionReflectionPage {}
+
+
+===== FILE: lib/features/learning_session/presentation/routes/learning_session_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningSessionRoutes {}
+
+
+===== FILE: lib/features/learning_session/presentation/states/learning_session_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningSessionViewState {}
+
+
+===== FILE: lib/features/learning_session/presentation/widgets/activity_host.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ActivityHost {}
+
+
+===== FILE: lib/features/learning_session/presentation/widgets/session_interruption_dialog.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SessionInterruptionDialog {}
+
+
+===== FILE: lib/features/learning_session/presentation/widgets/session_progress_header.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SessionProgressHeader {}
+
+
+===== FILE: lib/features/listening_practice/application/controllers/listening_practice.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ListeningPracticeController {}
+
+
+===== FILE: lib/features/listening_practice/application/use_cases/load_listening_activity.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadListeningActivity {}
+
+
+===== FILE: lib/features/listening_practice/application/use_cases/save_listening_progress.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SaveListeningProgress {}
+
+
+===== FILE: lib/features/listening_practice/application/use_cases/submit_listening_attempt.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SubmitListeningAttempt {}
+
+
+===== FILE: lib/features/listening_practice/data/data_sources/listening_practice_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class ListeningPracticeLocalDataSource {}
+
+
+===== FILE: lib/features/listening_practice/data/data_sources/listening_practice_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class ListeningPracticeRemoteDataSource {}
+
+
+===== FILE: lib/features/listening_practice/data/models/listening_activity.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ListeningActivityModel {}
+
+
+===== FILE: lib/features/listening_practice/data/repositories/listening_practice_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ListeningPracticeRepositoryAdapter {}
+
+
+===== FILE: lib/features/listening_practice/domain/entities/listening_activity.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ListeningActivity {}
+
+
+===== FILE: lib/features/listening_practice/domain/entities/listening_attempt.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ListeningAttempt {}
+
+
+===== FILE: lib/features/listening_practice/domain/repositories/listening_practice.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class ListeningPracticeRepository {}
+
+
+===== FILE: lib/features/listening_practice/domain/value_objects/listening_response.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum ListeningResponse { unspecified }
+
+
+===== FILE: lib/features/listening_practice/listening_practice.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ListeningPracticeFeature {}
+
+
+===== FILE: lib/features/listening_practice/presentation/pages/listening_practice_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ListeningPracticePage {}
+
+
+===== FILE: lib/features/listening_practice/presentation/routes/listening_practice_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ListeningPracticeRoutes {}
+
+
+===== FILE: lib/features/listening_practice/presentation/states/listening_practice_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ListeningPracticeViewState {}
+
+
+===== FILE: lib/features/listening_practice/presentation/widgets/listening_audio_player.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ListeningAudioPlayer {}
+
+
+===== FILE: lib/features/listening_practice/presentation/widgets/listening_question_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ListeningQuestionCard {}
+
+
+===== FILE: lib/features/listening_practice/presentation/widgets/transcript_reveal.dart =====
+
+// Structural placeholder only. No business logic.
+
+class TranscriptReveal {}
+
+
+===== FILE: lib/features/speaking_practice/application/controllers/speaking_practice.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SpeakingPracticeController {}
+
+
+===== FILE: lib/features/speaking_practice/application/use_cases/load_speaking_activity.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadSpeakingActivity {}
+
+
+===== FILE: lib/features/speaking_practice/application/use_cases/request_speaking_feedback.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RequestSpeakingFeedback {}
+
+
+===== FILE: lib/features/speaking_practice/application/use_cases/submit_speaking_attempt.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SubmitSpeakingAttempt {}
+
+
+===== FILE: lib/features/speaking_practice/data/data_sources/speaking_practice_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class SpeakingPracticeLocalDataSource {}
+
+
+===== FILE: lib/features/speaking_practice/data/data_sources/speaking_practice_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class SpeakingPracticeRemoteDataSource {}
+
+
+===== FILE: lib/features/speaking_practice/data/models/speaking_activity.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SpeakingActivityModel {}
+
+
+===== FILE: lib/features/speaking_practice/data/repositories/speaking_practice_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SpeakingPracticeRepositoryAdapter {}
+
+
+===== FILE: lib/features/speaking_practice/domain/entities/speaking_activity.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SpeakingActivity {}
+
+
+===== FILE: lib/features/speaking_practice/domain/entities/speaking_attempt.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SpeakingAttempt {}
+
+
+===== FILE: lib/features/speaking_practice/domain/repositories/speaking_practice.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class SpeakingPracticeRepository {}
+
+
+===== FILE: lib/features/speaking_practice/domain/value_objects/speaking_support_level.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum SpeakingSupportLevel { unspecified }
+
+
+===== FILE: lib/features/speaking_practice/presentation/pages/speaking_practice_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SpeakingPracticePage {}
+
+
+===== FILE: lib/features/speaking_practice/presentation/routes/speaking_practice_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SpeakingPracticeRoutes {}
+
+
+===== FILE: lib/features/speaking_practice/presentation/states/speaking_practice_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SpeakingPracticeViewState {}
+
+
+===== FILE: lib/features/speaking_practice/presentation/widgets/speaking_attempt_summary.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SpeakingAttemptSummary {}
+
+
+===== FILE: lib/features/speaking_practice/presentation/widgets/speaking_prompt_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SpeakingPromptCard {}
+
+
+===== FILE: lib/features/speaking_practice/presentation/widgets/speaking_support_panel.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SpeakingSupportPanel {}
+
+
+===== FILE: lib/features/speaking_practice/speaking_practice.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SpeakingPracticeFeature {}
+
+
+===== FILE: lib/features/vocabulary_practice/application/controllers/vocabulary_practice.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VocabularyPracticeController {}
+
+
+===== FILE: lib/features/vocabulary_practice/application/use_cases/load_vocabulary_practice.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadVocabularyPractice {}
+
+
+===== FILE: lib/features/vocabulary_practice/application/use_cases/submit_vocabulary_attempt.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SubmitVocabularyAttempt {}
+
+
+===== FILE: lib/features/vocabulary_practice/data/data_sources/vocabulary_practice_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class VocabularyPracticeLocalDataSource {}
+
+
+===== FILE: lib/features/vocabulary_practice/data/data_sources/vocabulary_practice_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class VocabularyPracticeRemoteDataSource {}
+
+
+===== FILE: lib/features/vocabulary_practice/data/models/vocabulary_item.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VocabularyItemModel {}
+
+
+===== FILE: lib/features/vocabulary_practice/data/repositories/vocabulary_practice_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VocabularyPracticeRepositoryAdapter {}
+
+
+===== FILE: lib/features/vocabulary_practice/domain/entities/vocabulary_item.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VocabularyItem {}
+
+
+===== FILE: lib/features/vocabulary_practice/domain/entities/vocabulary_practice_attempt.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VocabularyPracticeAttempt {}
+
+
+===== FILE: lib/features/vocabulary_practice/domain/repositories/vocabulary_practice.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class VocabularyPracticeRepository {}
+
+
+===== FILE: lib/features/vocabulary_practice/domain/value_objects/vocabulary_response.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum VocabularyResponse { unspecified }
+
+
+===== FILE: lib/features/vocabulary_practice/presentation/pages/vocabulary_practice_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VocabularyPracticePage {}
+
+
+===== FILE: lib/features/vocabulary_practice/presentation/routes/vocabulary_practice_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VocabularyPracticeRoutes {}
+
+
+===== FILE: lib/features/vocabulary_practice/presentation/states/vocabulary_practice_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VocabularyPracticeViewState {}
+
+
+===== FILE: lib/features/vocabulary_practice/presentation/widgets/vocabulary_context_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VocabularyContextCard {}
+
+
+===== FILE: lib/features/vocabulary_practice/presentation/widgets/vocabulary_response_input.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VocabularyResponseInput {}
+
+
+===== FILE: lib/features/vocabulary_practice/vocabulary_practice.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VocabularyPracticeFeature {}
+
+
+===== FILE: lib/features/writing_practice/application/controllers/writing_practice.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingPracticeController {}
+
+
+===== FILE: lib/features/writing_practice/application/use_cases/load_writing_activity.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadWritingActivity {}
+
+
+===== FILE: lib/features/writing_practice/application/use_cases/restore_writing_draft.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RestoreWritingDraft {}
+
+
+===== FILE: lib/features/writing_practice/application/use_cases/save_writing_draft.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SaveWritingDraft {}
+
+
+===== FILE: lib/features/writing_practice/application/use_cases/submit_writing_attempt.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SubmitWritingAttempt {}
+
+
+===== FILE: lib/features/writing_practice/data/data_sources/writing_practice_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class WritingPracticeLocalDataSource {}
+
+
+===== FILE: lib/features/writing_practice/data/data_sources/writing_practice_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class WritingPracticeRemoteDataSource {}
+
+
+===== FILE: lib/features/writing_practice/data/models/writing_activity.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingActivityModel {}
+
+
+===== FILE: lib/features/writing_practice/data/models/writing_draft.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingDraftModel {}
+
+
+===== FILE: lib/features/writing_practice/data/repositories/writing_practice_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingPracticeRepositoryAdapter {}
+
+
+===== FILE: lib/features/writing_practice/domain/entities/writing_activity.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingActivity {}
+
+
+===== FILE: lib/features/writing_practice/domain/entities/writing_attempt.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingAttempt {}
+
+
+===== FILE: lib/features/writing_practice/domain/entities/writing_draft.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingDraft {}
+
+
+===== FILE: lib/features/writing_practice/domain/repositories/writing_practice.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class WritingPracticeRepository {}
+
+
+===== FILE: lib/features/writing_practice/domain/value_objects/writing_genre.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum WritingGenre { unspecified }
+
+
+===== FILE: lib/features/writing_practice/presentation/pages/writing_practice_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingPracticePage {}
+
+
+===== FILE: lib/features/writing_practice/presentation/routes/writing_practice_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingPracticeRoutes {}
+
+
+===== FILE: lib/features/writing_practice/presentation/states/writing_practice_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingPracticeViewState {}
+
+
+===== FILE: lib/features/writing_practice/presentation/widgets/writing_editor.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingEditor {}
+
+
+===== FILE: lib/features/writing_practice/presentation/widgets/writing_prompt_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingPromptCard {}
+
+
+===== FILE: lib/features/writing_practice/presentation/widgets/writing_submission_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingSubmissionStatus {}
+
+
+===== FILE: lib/features/writing_practice/writing_practice.dart =====
+
+// Structural placeholder only. No business logic.
+
+class WritingPracticeFeature {}
 

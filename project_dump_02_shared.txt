@@ -1,3 +1,283 @@
 PROJECT ROOT: C:\Users\ext.fadiguzel\OneDrive - Vibracoustic\Masaüstü\english_acquisition_app_phase1_integrated_final\english_acquisition_app_phase1_integrated
-GENERATED: 2026-11-02 16:07:59
+GENERATED: 2026-11-02 16:18:34
+
+
+===== FILE: lib/shared/contracts/authentication_contract.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class AuthenticationContract {}
+
+
+===== FILE: lib/shared/contracts/current_learner_contract.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class CurrentLearnerContract {}
+
+
+===== FILE: lib/shared/contracts/learning_plan_contract.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class LearningPlanContract {}
+
+
+===== FILE: lib/shared/contracts/voice_workflow_contract.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class VoiceWorkflowContract {}
+
+
+===== FILE: lib/shared/design_system/buttons/app_primary_button.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppPrimaryButton {}
+
+
+===== FILE: lib/shared/design_system/buttons/app_secondary_button.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppSecondaryButton {}
+
+
+===== FILE: lib/shared/design_system/buttons/app_text_button.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppTextButton {}
+
+
+===== FILE: lib/shared/design_system/cards/app_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppCard {}
+
+
+===== FILE: lib/shared/design_system/cards/status_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class StatusCard {}
+
+
+===== FILE: lib/shared/design_system/dialogs/confirmation_dialog.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ConfirmationDialog {}
+
+
+===== FILE: lib/shared/design_system/dialogs/error_dialog.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ErrorDialog {}
+
+
+===== FILE: lib/shared/design_system/feedback/app_empty_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppEmptyState {}
+
+
+===== FILE: lib/shared/design_system/feedback/app_error_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppErrorState {}
+
+
+===== FILE: lib/shared/design_system/feedback/app_loading_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppLoadingState {}
+
+
+===== FILE: lib/shared/design_system/feedback/offline_indicator.dart =====
+
+// Structural placeholder only. No business logic.
+
+class OfflineIndicator {}
+
+
+===== FILE: lib/shared/design_system/inputs/app_text_area.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppTextArea {}
+
+
+===== FILE: lib/shared/design_system/inputs/app_text_field.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppTextField {}
+
+
+===== FILE: lib/shared/design_system/layout/app_scaffold.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppScaffold {}
+
+
+===== FILE: lib/shared/design_system/layout/app_section.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppSection {}
+
+
+===== FILE: lib/shared/design_system/layout/responsive_content.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ResponsiveContent {}
+
+
+===== FILE: lib/shared/design_system/progress/app_progress_indicator.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppProgressIndicator {}
+
+
+===== FILE: lib/shared/design_system/progress/step_progress_indicator.dart =====
+
+// Structural placeholder only. No business logic.
+
+class StepProgressIndicator {}
+
+
+===== FILE: lib/shared/formatters/date_formatter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DateFormatter {}
+
+
+===== FILE: lib/shared/formatters/duration_formatter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DurationFormatter {}
+
+
+===== FILE: lib/shared/formatters/file_size_formatter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FileSizeFormatter {}
+
+
+===== FILE: lib/shared/formatters/score_range_formatter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ScoreRangeFormatter {}
+
+
+===== FILE: lib/shared/kernel/assessment_attempt_id.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentAttemptId {}
+
+
+===== FILE: lib/shared/kernel/competency_id.dart =====
+
+// Structural placeholder only. No business logic.
+
+class CompetencyId {}
+
+
+===== FILE: lib/shared/kernel/confidence_band.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum ConfidenceBand { unspecified }
+
+
+===== FILE: lib/shared/kernel/evidence_id.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceId {}
+
+
+===== FILE: lib/shared/kernel/learner_id.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerId {}
+
+
+===== FILE: lib/shared/kernel/session_id.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SessionId {}
+
+
+===== FILE: lib/shared/kernel/simulation_id.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationId {}
+
+
+===== FILE: lib/shared/kernel/synchronization_label.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SynchronizationLabel {}
+
+
+===== FILE: lib/shared/presentation/paged_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class PagedViewState {}
+
+
+===== FILE: lib/shared/presentation/submission_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SubmissionViewState {}
+
+
+===== FILE: lib/shared/presentation/validation_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ValidationViewState {}
+
+
+===== FILE: lib/shared/validation/field_validator.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class FieldValidator {}
+
+
+===== FILE: lib/shared/validation/required_value_validator.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RequiredValueValidator {}
+
+
+===== FILE: lib/shared/validation/text_length_validator.dart =====
+
+// Structural placeholder only. No business logic.
+
+class TextLengthValidator {}
 

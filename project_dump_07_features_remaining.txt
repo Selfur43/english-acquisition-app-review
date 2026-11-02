@@ -1,3 +1,976 @@
 PROJECT ROOT: C:\Users\ext.fadiguzel\OneDrive - Vibracoustic\Masaüstü\english_acquisition_app_phase1_integrated_final\english_acquisition_app_phase1_integrated
-GENERATED: 2026-11-02 16:07:59
+GENERATED: 2026-11-02 16:18:34
+
+
+===== FILE: lib/features/data_management/application/controllers/data_management_controller.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DataManagementController {}
+
+
+===== FILE: lib/features/data_management/application/use_cases/clear_local_data.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ClearLocalData {}
+
+
+===== FILE: lib/features/data_management/application/use_cases/request_data_export.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RequestDataExport {}
+
+
+===== FILE: lib/features/data_management/application/use_cases/request_learner_deletion.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RequestLearnerDeletion {}
+
+
+===== FILE: lib/features/data_management/data_management.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DataManagementFeature {}
+
+
+===== FILE: lib/features/data_management/data/data_sources/data_management_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class DataManagementLocalDataSource {}
+
+
+===== FILE: lib/features/data_management/data/data_sources/data_management_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class DataManagementRemoteDataSource {}
+
+
+===== FILE: lib/features/data_management/data/models/data_export_request_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DataExportRequestModel {}
+
+
+===== FILE: lib/features/data_management/data/models/deletion_request_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DeletionRequestModel {}
+
+
+===== FILE: lib/features/data_management/data/repositories/data_management_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DataManagementRepositoryAdapter {}
+
+
+===== FILE: lib/features/data_management/domain/entities/data_export_request.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DataExportRequest {}
+
+
+===== FILE: lib/features/data_management/domain/entities/deletion_request.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DeletionRequest {}
+
+
+===== FILE: lib/features/data_management/domain/repositories/data_management_repository.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class DataManagementRepository {}
+
+
+===== FILE: lib/features/data_management/domain/value_objects/data_export_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum DataExportStatus { unspecified }
+
+
+===== FILE: lib/features/data_management/domain/value_objects/deletion_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum DeletionStatus { unspecified }
+
+
+===== FILE: lib/features/data_management/presentation/pages/data_management_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DataManagementPage {}
+
+
+===== FILE: lib/features/data_management/presentation/routes/data_management_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DataManagementRoutes {}
+
+
+===== FILE: lib/features/data_management/presentation/states/data_management_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DataManagementViewState {}
+
+
+===== FILE: lib/features/data_management/presentation/widgets/data_export_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DataExportCard {}
+
+
+===== FILE: lib/features/data_management/presentation/widgets/delete_account_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DeleteAccountCard {}
+
+
+===== FILE: lib/features/data_management/presentation/widgets/local_data_cleanup_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LocalDataCleanupCard {}
+
+
+===== FILE: lib/features/diagnostics/application/controllers/diagnostics_controller.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DiagnosticsController {}
+
+
+===== FILE: lib/features/diagnostics/application/use_cases/load_diagnostics.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadDiagnostics {}
+
+
+===== FILE: lib/features/diagnostics/application/use_cases/retry_failed_operation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RetryFailedOperation {}
+
+
+===== FILE: lib/features/diagnostics/application/use_cases/run_connectivity_check.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RunConnectivityCheck {}
+
+
+===== FILE: lib/features/diagnostics/data/data_sources/diagnostics_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class DiagnosticsDataSource {}
+
+
+===== FILE: lib/features/diagnostics/data/models/diagnostics_summary_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DiagnosticsSummaryModel {}
+
+
+===== FILE: lib/features/diagnostics/data/repositories/diagnostics_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DiagnosticsRepositoryAdapter {}
+
+
+===== FILE: lib/features/diagnostics/data/repositories/diagnostics_repository.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class DiagnosticsRepository {}
+
+
+===== FILE: lib/features/diagnostics/diagnostics.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DiagnosticsFeature {}
+
+
+===== FILE: lib/features/diagnostics/presentation/pages/diagnostics_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DiagnosticsPage {}
+
+
+===== FILE: lib/features/diagnostics/presentation/routes/diagnostics_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DiagnosticsRoutes {}
+
+
+===== FILE: lib/features/diagnostics/presentation/states/diagnostics_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DiagnosticsViewState {}
+
+
+===== FILE: lib/features/diagnostics/presentation/widgets/connectivity_status_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ConnectivityStatusCard {}
+
+
+===== FILE: lib/features/diagnostics/presentation/widgets/failed_operations_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FailedOperationsCard {}
+
+
+===== FILE: lib/features/diagnostics/presentation/widgets/local_storage_status_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LocalStorageStatusCard {}
+
+
+===== FILE: lib/features/diagnostics/presentation/widgets/synchronization_status_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SynchronizationStatusCard {}
+
+
+===== FILE: lib/features/feedback/application/controllers/feedback.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FeedbackController {}
+
+
+===== FILE: lib/features/feedback/application/use_cases/acknowledge_feedback.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AcknowledgeFeedback {}
+
+
+===== FILE: lib/features/feedback/application/use_cases/challenge_feedback.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ChallengeFeedback {}
+
+
+===== FILE: lib/features/feedback/application/use_cases/load_feedback_detail.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadFeedbackDetail {}
+
+
+===== FILE: lib/features/feedback/application/use_cases/load_feedback.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadFeedback {}
+
+
+===== FILE: lib/features/feedback/data/data_sources/feedback_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class FeedbackLocalDataSource {}
+
+
+===== FILE: lib/features/feedback/data/data_sources/feedback_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class FeedbackRemoteDataSource {}
+
+
+===== FILE: lib/features/feedback/data/models/feedback_item.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FeedbackItemModel {}
+
+
+===== FILE: lib/features/feedback/data/repositories/feedback_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FeedbackRepositoryAdapter {}
+
+
+===== FILE: lib/features/feedback/domain/entities/feedback_item.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FeedbackItem {}
+
+
+===== FILE: lib/features/feedback/domain/entities/feedback_summary.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FeedbackSummary {}
+
+
+===== FILE: lib/features/feedback/domain/repositories/feedback.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class FeedbackRepository {}
+
+
+===== FILE: lib/features/feedback/domain/value_objects/feedback_priority.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum FeedbackPriority { unspecified }
+
+
+===== FILE: lib/features/feedback/domain/value_objects/feedback_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum FeedbackStatus { unspecified }
+
+
+===== FILE: lib/features/feedback/feedback.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FeedbackFeature {}
+
+
+===== FILE: lib/features/feedback/presentation/pages/feedback_detail_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FeedbackDetailPage {}
+
+
+===== FILE: lib/features/feedback/presentation/pages/feedback_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FeedbackPage {}
+
+
+===== FILE: lib/features/feedback/presentation/routes/feedback_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FeedbackRoutes {}
+
+
+===== FILE: lib/features/feedback/presentation/states/feedback_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FeedbackViewState {}
+
+
+===== FILE: lib/features/feedback/presentation/widgets/feedback_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FeedbackCard {}
+
+
+===== FILE: lib/features/feedback/presentation/widgets/feedback_priority_badge.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FeedbackPriorityBadge {}
+
+
+===== FILE: lib/features/feedback/presentation/widgets/feedback_source_reference.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FeedbackSourceReference {}
+
+
+===== FILE: lib/features/progress/application/controllers/progress_controller.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ProgressController {}
+
+
+===== FILE: lib/features/progress/application/use_cases/load_competency_progress.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadCompetencyProgress {}
+
+
+===== FILE: lib/features/progress/application/use_cases/load_progress_summary.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadProgressSummary {}
+
+
+===== FILE: lib/features/progress/application/use_cases/load_retention_summary.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadRetentionSummary {}
+
+
+===== FILE: lib/features/progress/data/data_sources/progress_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class ProgressLocalDataSource {}
+
+
+===== FILE: lib/features/progress/data/data_sources/progress_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class ProgressRemoteDataSource {}
+
+
+===== FILE: lib/features/progress/data/models/competency_progress_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class CompetencyProgressModel {}
+
+
+===== FILE: lib/features/progress/data/models/progress_summary_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ProgressSummaryModel {}
+
+
+===== FILE: lib/features/progress/data/repositories/progress_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ProgressRepositoryAdapter {}
+
+
+===== FILE: lib/features/progress/data/repositories/progress_repository.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class ProgressRepository {}
+
+
+===== FILE: lib/features/progress/presentation/pages/competency_progress_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class CompetencyProgressPage {}
+
+
+===== FILE: lib/features/progress/presentation/pages/progress_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ProgressPage {}
+
+
+===== FILE: lib/features/progress/presentation/pages/retention_progress_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RetentionProgressPage {}
+
+
+===== FILE: lib/features/progress/presentation/routes/progress_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ProgressRoutes {}
+
+
+===== FILE: lib/features/progress/presentation/states/progress_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ProgressViewState {}
+
+
+===== FILE: lib/features/progress/presentation/widgets/competency_progress_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class CompetencyProgressCard {}
+
+
+===== FILE: lib/features/progress/presentation/widgets/retention_summary_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RetentionSummaryCard {}
+
+
+===== FILE: lib/features/progress/presentation/widgets/skill_profile_chart.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SkillProfileChart {}
+
+
+===== FILE: lib/features/progress/progress.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ProgressFeature {}
+
+
+===== FILE: lib/features/readiness/application/controllers/readiness.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReadinessController {}
+
+
+===== FILE: lib/features/readiness/application/use_cases/load_readiness_classification.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadReadinessClassification {}
+
+
+===== FILE: lib/features/readiness/application/use_cases/request_readiness_appeal.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RequestReadinessAppeal {}
+
+
+===== FILE: lib/features/readiness/application/use_cases/request_readiness_review.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RequestReadinessReview {}
+
+
+===== FILE: lib/features/readiness/data/data_sources/readiness_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class ReadinessLocalDataSource {}
+
+
+===== FILE: lib/features/readiness/data/data_sources/readiness_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class ReadinessRemoteDataSource {}
+
+
+===== FILE: lib/features/readiness/data/models/readiness_classification.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReadinessClassificationModel {}
+
+
+===== FILE: lib/features/readiness/data/repositories/readiness_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReadinessRepositoryAdapter {}
+
+
+===== FILE: lib/features/readiness/domain/entities/readiness_classification.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReadinessClassification {}
+
+
+===== FILE: lib/features/readiness/domain/entities/readiness_evidence_summary.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReadinessEvidenceSummary {}
+
+
+===== FILE: lib/features/readiness/domain/repositories/readiness.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class ReadinessRepository {}
+
+
+===== FILE: lib/features/readiness/domain/value_objects/readiness_confidence.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum ReadinessConfidence { unspecified }
+
+
+===== FILE: lib/features/readiness/domain/value_objects/readiness_level.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum ReadinessLevel { unspecified }
+
+
+===== FILE: lib/features/readiness/domain/value_objects/readiness_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum ReadinessStatus { unspecified }
+
+
+===== FILE: lib/features/readiness/presentation/pages/readiness_detail_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReadinessDetailPage {}
+
+
+===== FILE: lib/features/readiness/presentation/pages/readiness_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReadinessPage {}
+
+
+===== FILE: lib/features/readiness/presentation/routes/readiness_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReadinessRoutes {}
+
+
+===== FILE: lib/features/readiness/presentation/states/readiness_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReadinessViewState {}
+
+
+===== FILE: lib/features/readiness/presentation/widgets/readiness_classification_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReadinessClassificationCard {}
+
+
+===== FILE: lib/features/readiness/presentation/widgets/readiness_confidence_indicator.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReadinessConfidenceIndicator {}
+
+
+===== FILE: lib/features/readiness/presentation/widgets/readiness_evidence_summary_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReadinessEvidenceSummaryCard {}
+
+
+===== FILE: lib/features/readiness/readiness.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReadinessFeature {}
+
+
+===== FILE: lib/features/recommendation/application/controllers/recommendation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecommendationController {}
+
+
+===== FILE: lib/features/recommendation/application/use_cases/accept_recommendation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AcceptRecommendation {}
+
+
+===== FILE: lib/features/recommendation/application/use_cases/defer_recommendation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DeferRecommendation {}
+
+
+===== FILE: lib/features/recommendation/application/use_cases/load_recommendation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadRecommendation {}
+
+
+===== FILE: lib/features/recommendation/application/use_cases/reject_recommendation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RejectRecommendation {}
+
+
+===== FILE: lib/features/recommendation/application/use_cases/request_recommendation_refresh.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RequestRecommendationRefresh {}
+
+
+===== FILE: lib/features/recommendation/data/data_sources/recommendation_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class RecommendationLocalDataSource {}
+
+
+===== FILE: lib/features/recommendation/data/data_sources/recommendation_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class RecommendationRemoteDataSource {}
+
+
+===== FILE: lib/features/recommendation/data/models/learning_recommendation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningRecommendationModel {}
+
+
+===== FILE: lib/features/recommendation/data/repositories/recommendation_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecommendationRepositoryAdapter {}
+
+
+===== FILE: lib/features/recommendation/domain/entities/learning_recommendation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningRecommendation {}
+
+
+===== FILE: lib/features/recommendation/domain/entities/recommendation_alternative.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecommendationAlternative {}
+
+
+===== FILE: lib/features/recommendation/domain/repositories/recommendation.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class RecommendationRepository {}
+
+
+===== FILE: lib/features/recommendation/domain/value_objects/recommendation_confidence.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum RecommendationConfidence { unspecified }
+
+
+===== FILE: lib/features/recommendation/domain/value_objects/recommendation_response.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum RecommendationResponse { unspecified }
+
+
+===== FILE: lib/features/recommendation/domain/value_objects/recommendation_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum RecommendationStatus { unspecified }
+
+
+===== FILE: lib/features/recommendation/presentation/pages/recommendation_detail_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecommendationDetailPage {}
+
+
+===== FILE: lib/features/recommendation/presentation/pages/recommendations_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecommendationsPage {}
+
+
+===== FILE: lib/features/recommendation/presentation/routes/recommendation_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecommendationRoutes {}
+
+
+===== FILE: lib/features/recommendation/presentation/states/recommendation_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecommendationViewState {}
+
+
+===== FILE: lib/features/recommendation/presentation/widgets/recommendation_alternatives.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecommendationAlternatives {}
+
+
+===== FILE: lib/features/recommendation/presentation/widgets/recommendation_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecommendationCard {}
+
+
+===== FILE: lib/features/recommendation/presentation/widgets/recommendation_rationale.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecommendationRationale {}
+
+
+===== FILE: lib/features/recommendation/recommendation.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecommendationFeature {}
+
+
+===== FILE: lib/features/settings/application/controllers/settings_controller.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SettingsController {}
+
+
+===== FILE: lib/features/settings/application/use_cases/load_settings.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadSettings {}
+
+
+===== FILE: lib/features/settings/application/use_cases/update_settings.dart =====
+
+// Structural placeholder only. No business logic.
+
+class UpdateSettings {}
+
+
+===== FILE: lib/features/settings/data/data_sources/settings_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class SettingsLocalDataSource {}
+
+
+===== FILE: lib/features/settings/data/models/app_settings_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppSettingsModel {}
+
+
+===== FILE: lib/features/settings/data/repositories/settings_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SettingsRepositoryAdapter {}
+
+
+===== FILE: lib/features/settings/data/repositories/settings_repository.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class SettingsRepository {}
+
+
+===== FILE: lib/features/settings/presentation/pages/settings_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SettingsPage {}
+
+
+===== FILE: lib/features/settings/presentation/routes/settings_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SettingsRoutes {}
+
+
+===== FILE: lib/features/settings/presentation/states/settings_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SettingsViewState {}
+
+
+===== FILE: lib/features/settings/presentation/widgets/accessibility_settings_section.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AccessibilitySettingsSection {}
+
+
+===== FILE: lib/features/settings/presentation/widgets/appearance_settings_section.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AppearanceSettingsSection {}
+
+
+===== FILE: lib/features/settings/presentation/widgets/offline_settings_section.dart =====
+
+// Structural placeholder only. No business logic.
+
+class OfflineSettingsSection {}
+
+
+===== FILE: lib/features/settings/presentation/widgets/privacy_settings_section.dart =====
+
+// Structural placeholder only. No business logic.
+
+class PrivacySettingsSection {}
+
+
+===== FILE: lib/features/settings/settings.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SettingsFeature {}
 

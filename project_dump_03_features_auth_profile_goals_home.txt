@@ -1,3 +1,910 @@
 PROJECT ROOT: C:\Users\ext.fadiguzel\OneDrive - Vibracoustic\Masaüstü\english_acquisition_app_phase1_integrated_final\english_acquisition_app_phase1_integrated
-GENERATED: 2026-11-02 16:07:59
+GENERATED: 2026-11-02 16:18:34
+
+
+===== FILE: lib/features/authentication/application/controllers/authentication_controller.dart =====
+
+import 'package:flutter/foundation.dart';
+
+import '../../data/repositories/authentication_repository_adapter.dart';
+import '../../domain/entities/authenticated_user.dart';
+import '../../domain/repositories/authentication_repository.dart';
+import '../../domain/value_objects/authentication_status.dart';
+
+final class AuthenticationController extends ChangeNotifier {
+  AuthenticationController(this._repository);
+
+  final AuthenticationRepository _repository;
+
+  String? errorMessage;
+  bool isBusy = false;
+  AuthenticationStatus status = AuthenticationStatus.initializing;
+  AuthenticatedUser? user;
+
+  Future<void> initialize() async {
+    user = await _repository.restore();
+    status = user == null
+        ? AuthenticationStatus.unauthenticated
+        : AuthenticationStatus.authenticated;
+    notifyListeners();
+  }
+
+  Future<void> signIn({
+    required String password,
+    required String userName,
+  }) async {
+    errorMessage = null;
+    isBusy = true;
+    notifyListeners();
+    try {
+      user = await _repository.signIn(
+        password: password,
+        userName: userName,
+      );
+      status = AuthenticationStatus.authenticated;
+    } on AuthenticationFailure catch (failure) {
+      errorMessage = failure.message;
+      status = AuthenticationStatus.unauthenticated;
+    } finally {
+      isBusy = false;
+      notifyListeners();
+    }
+  }
+
+  Future<void> signOut() async {
+    await _repository.signOut();
+    errorMessage = null;
+    status = AuthenticationStatus.unauthenticated;
+    user = null;
+    notifyListeners();
+  }
+}
+
+
+===== FILE: lib/features/authentication/application/use_cases/reauthenticate.dart =====
+
+// Structural placeholder only. No business logic.
+
+class Reauthenticate {}
+
+
+===== FILE: lib/features/authentication/application/use_cases/refresh_authentication.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RefreshAuthentication {}
+
+
+===== FILE: lib/features/authentication/application/use_cases/restore_authentication.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RestoreAuthentication {}
+
+
+===== FILE: lib/features/authentication/application/use_cases/sign_in.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SignIn {}
+
+
+===== FILE: lib/features/authentication/application/use_cases/sign_out.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SignOut {}
+
+
+===== FILE: lib/features/authentication/authentication.dart =====
+
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+
+import '../../core/security/secure_session_store.dart';
+import 'application/controllers/authentication_controller.dart';
+import 'data/repositories/authentication_repository_adapter.dart';
+import 'data/secure_storage/flutter_credential_store.dart';
+import 'domain/repositories/authentication_repository.dart';
+
+export 'application/controllers/authentication_controller.dart';
+export 'domain/entities/authenticated_user.dart';
+export 'domain/value_objects/authentication_status.dart';
+
+final secureSessionStoreProvider = Provider<SecureSessionStore>(
+  (ref) => const FlutterSecureSessionStore(FlutterSecureStorage()),
+);
+
+final authenticationRepositoryProvider = Provider<AuthenticationRepository>(
+  (ref) => AuthenticationRepositoryAdapter(
+    FlutterCredentialStore(ref.watch(secureSessionStoreProvider)),
+  ),
+);
+
+final authenticationControllerProvider =
+    ChangeNotifierProvider<AuthenticationController>((ref) {
+  final controller = AuthenticationController(
+    ref.watch(authenticationRepositoryProvider),
+  );
+  controller.initialize();
+  return controller;
+});
+
+
+===== FILE: lib/features/authentication/data/data_sources/authentication_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class AuthenticationLocalDataSource {}
+
+
+===== FILE: lib/features/authentication/data/data_sources/authentication_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class AuthenticationRemoteDataSource {}
+
+
+===== FILE: lib/features/authentication/data/models/authenticated_user_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AuthenticatedUserModel {}
+
+
+===== FILE: lib/features/authentication/data/models/authentication_session_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AuthenticationSessionModel {}
+
+
+===== FILE: lib/features/authentication/data/repositories/authentication_repository_adapter.dart =====
+
+import '../../domain/entities/authenticated_user.dart';
+import '../../domain/repositories/authentication_repository.dart';
+import '../secure_storage/credential_store.dart';
+
+final class AuthenticationFailure implements Exception {
+  const AuthenticationFailure(this.message);
+
+  final String message;
+}
+
+final class AuthenticationRepositoryAdapter
+    implements AuthenticationRepository {
+  const AuthenticationRepositoryAdapter(this._credentialStore);
+
+  final CredentialStore _credentialStore;
+
+  static const _users = <String, AuthenticatedUser>{
+    'furkan': AuthenticatedUser(displayName: 'Furkan', id: 'learner-1'),
+    'learner2': AuthenticatedUser(displayName: 'Learner 2', id: 'learner-2'),
+  };
+
+  @override
+  Future<AuthenticatedUser?> restore() async {
+    final userId = await _credentialStore.readUserId();
+    for (final user in _users.values) {
+      if (user.id == userId) return user;
+    }
+    return null;
+  }
+
+  @override
+  Future<AuthenticatedUser> signIn({
+    required String password,
+    required String userName,
+  }) async {
+    final user = _users[userName.trim().toLowerCase()];
+    if (user == null || password != 'change-me-now') {
+      throw const AuthenticationFailure('Invalid credentials.');
+    }
+    await _credentialStore.writeUserId(user.id);
+    return user;
+  }
+
+  @override
+  Future<void> signOut() => _credentialStore.clear();
+}
+
+
+===== FILE: lib/features/authentication/data/secure_storage/credential_store.dart =====
+
+abstract interface class CredentialStore {
+  Future<void> clear();
+  Future<String?> readUserId();
+  Future<void> writeUserId(String userId);
+}
+
+
+===== FILE: lib/features/authentication/data/secure_storage/flutter_credential_store.dart =====
+
+import '../../../../core/security/secure_session_store.dart';
+import 'credential_store.dart';
+
+final class FlutterCredentialStore implements CredentialStore {
+  const FlutterCredentialStore(this._store);
+
+  final SecureSessionStore _store;
+
+  @override
+  Future<void> clear() => _store.clear();
+
+  @override
+  Future<String?> readUserId() => _store.readUserId();
+
+  @override
+  Future<void> writeUserId(String userId) => _store.writeUserId(userId);
+}
+
+
+===== FILE: lib/features/authentication/domain/entities/authenticated_user.dart =====
+
+import 'package:flutter/foundation.dart';
+
+@immutable
+final class AuthenticatedUser {
+  const AuthenticatedUser({required this.displayName, required this.id});
+
+  final String displayName;
+  final String id;
+}
+
+
+===== FILE: lib/features/authentication/domain/entities/authentication_session.dart =====
+
+import 'package:flutter/foundation.dart';
+
+import 'authenticated_user.dart';
+
+@immutable
+final class AuthenticationSession {
+  const AuthenticationSession({required this.user});
+
+  final AuthenticatedUser user;
+}
+
+
+===== FILE: lib/features/authentication/domain/repositories/authentication_repository.dart =====
+
+import '../entities/authenticated_user.dart';
+
+abstract interface class AuthenticationRepository {
+  Future<AuthenticatedUser?> restore();
+  Future<AuthenticatedUser> signIn({
+    required String password,
+    required String userName,
+  });
+  Future<void> signOut();
+}
+
+
+===== FILE: lib/features/authentication/domain/value_objects/authentication_status.dart =====
+
+enum AuthenticationStatus { initializing, authenticated, unauthenticated }
+
+
+===== FILE: lib/features/authentication/domain/value_objects/sign_out_reason.dart =====
+
+enum SignOutReason { userRequested, sessionExpired, accountDisabled }
+
+
+===== FILE: lib/features/authentication/presentation/controllers/sign_in_controller.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SignInController {}
+
+
+===== FILE: lib/features/authentication/presentation/pages/reauthentication_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReauthenticationPage {}
+
+
+===== FILE: lib/features/authentication/presentation/pages/session_expired_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SessionExpiredPage {}
+
+
+===== FILE: lib/features/authentication/presentation/pages/sign_in_page.dart =====
+
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../authentication.dart';
+
+final class SignInPage extends ConsumerStatefulWidget {
+  const SignInPage({super.key});
+
+  @override
+  ConsumerState<SignInPage> createState() => _SignInPageState();
+}
+
+final class _SignInPageState extends ConsumerState<SignInPage> {
+  final _passwordController = TextEditingController();
+  final _userNameController = TextEditingController();
+
+  @override
+  void dispose() {
+    _passwordController.dispose();
+    _userNameController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final authentication = ref.watch(authenticationControllerProvider);
+    return Scaffold(
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(24),
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 420),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'English Acquisition',
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
+                  const SizedBox(height: 8),
+                  const Text('Private two-user learning application'),
+                  const SizedBox(height: 32),
+                  TextField(
+                    controller: _userNameController,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'User name',
+                    ),
+                    textInputAction: TextInputAction.next,
+                  ),
+                  const SizedBox(height: 16),
+                  TextField(
+                    controller: _passwordController,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Password',
+                    ),
+                    obscureText: true,
+                    onSubmitted: (_) => _submit(),
+                  ),
+                  if (authentication.errorMessage != null)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12),
+                      child: Text(
+                        authentication.errorMessage!,
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.error,
+                        ),
+                      ),
+                    ),
+                  const SizedBox(height: 20),
+                  SizedBox(
+                    width: double.infinity,
+                    child: FilledButton(
+                      onPressed: authentication.isBusy ? null : _submit,
+                      child: Text(
+                        authentication.isBusy ? 'Signing in...' : 'Sign in',
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Future<void> _submit() =>
+      ref.read(authenticationControllerProvider).signIn(
+            password: _passwordController.text,
+            userName: _userNameController.text,
+          );
+}
+
+
+===== FILE: lib/features/authentication/presentation/routes/authentication_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AuthenticationRoutes {}
+
+
+===== FILE: lib/features/authentication/presentation/states/authentication_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AuthenticationViewState {}
+
+
+===== FILE: lib/features/authentication/presentation/states/sign_in_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SignInViewState {}
+
+
+===== FILE: lib/features/authentication/presentation/widgets/credentials_form.dart =====
+
+// Structural placeholder only. No business logic.
+
+class CredentialsForm {}
+
+
+===== FILE: lib/features/authentication/presentation/widgets/sign_out_button.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SignOutButton {}
+
+
+===== FILE: lib/features/goals/application/controllers/goals_controller.dart =====
+
+// Structural placeholder only. No business logic.
+
+class GoalsController {}
+
+
+===== FILE: lib/features/goals/application/controllers/goals.dart =====
+
+// Structural placeholder only. No business logic.
+
+class GoalsController {}
+
+
+===== FILE: lib/features/goals/application/use_cases/create_goal.dart =====
+
+// Structural placeholder only. No business logic.
+
+class CreateGoal {}
+
+
+===== FILE: lib/features/goals/application/use_cases/load_goals.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadGoals {}
+
+
+===== FILE: lib/features/goals/application/use_cases/reprioritize_goal.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReprioritizeGoal {}
+
+
+===== FILE: lib/features/goals/application/use_cases/revise_goal.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ReviseGoal {}
+
+
+===== FILE: lib/features/goals/data/data_sources/goals_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class GoalsLocalDataSource {}
+
+
+===== FILE: lib/features/goals/data/data_sources/goals_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class GoalsRemoteDataSource {}
+
+
+===== FILE: lib/features/goals/data/models/learner_goal_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerGoalModel {}
+
+
+===== FILE: lib/features/goals/data/models/learner_goal.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerGoalModel {}
+
+
+===== FILE: lib/features/goals/data/repositories/goals_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class GoalsRepositoryAdapter {}
+
+
+===== FILE: lib/features/goals/domain/entities/learner_goal.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerGoal {}
+
+
+===== FILE: lib/features/goals/domain/repositories/goals_repository.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class GoalsRepository {}
+
+
+===== FILE: lib/features/goals/domain/repositories/goals.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class GoalsRepository {}
+
+
+===== FILE: lib/features/goals/domain/value_objects/goal_priority.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum GoalPriority { unspecified }
+
+
+===== FILE: lib/features/goals/domain/value_objects/goal_status.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum GoalStatus { unspecified }
+
+
+===== FILE: lib/features/goals/goals.dart =====
+
+// Structural placeholder only. No business logic.
+
+class GoalsFeature {}
+
+
+===== FILE: lib/features/goals/presentation/pages/goal_editor_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class GoalEditorPage {}
+
+
+===== FILE: lib/features/goals/presentation/pages/goals_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class GoalsPage {}
+
+
+===== FILE: lib/features/goals/presentation/routes/goals_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class GoalsRoutes {}
+
+
+===== FILE: lib/features/goals/presentation/states/goals_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class GoalsViewState {}
+
+
+===== FILE: lib/features/goals/presentation/widgets/goal_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class GoalCard {}
+
+
+===== FILE: lib/features/goals/presentation/widgets/goal_editor.dart =====
+
+// Structural placeholder only. No business logic.
+
+class GoalEditor {}
+
+
+===== FILE: lib/features/goals/presentation/widgets/goal_priority_selector.dart =====
+
+// Structural placeholder only. No business logic.
+
+class GoalPrioritySelector {}
+
+
+===== FILE: lib/features/home/application/controllers/home_controller.dart =====
+
+// Structural placeholder only. No business logic.
+
+class HomeController {}
+
+
+===== FILE: lib/features/home/application/models/home_summary.dart =====
+
+// Structural placeholder only. No business logic.
+
+class HomeSummary {}
+
+
+===== FILE: lib/features/home/data/data_sources/home_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class HomeRemoteDataSource {}
+
+
+===== FILE: lib/features/home/data/models/home_summary_model.dart =====
+
+// Structural placeholder only. No business logic.
+
+class HomeSummaryModel {}
+
+
+===== FILE: lib/features/home/data/repositories/home_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class HomeRepositoryAdapter {}
+
+
+===== FILE: lib/features/home/data/repositories/home_repository.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class HomeRepository {}
+
+
+===== FILE: lib/features/home/home.dart =====
+
+// Structural placeholder only. No business logic.
+
+class HomeFeature {}
+
+
+===== FILE: lib/features/home/presentation/pages/home_page.dart =====
+
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../../authentication/authentication.dart';
+
+final class HomePage extends ConsumerWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final authentication = ref.watch(authenticationControllerProvider);
+    final user = authentication.user;
+    return Scaffold(
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () =>
+                ref.read(authenticationControllerProvider).signOut(),
+            tooltip: 'Sign out',
+          ),
+        ],
+        title: const Text('Today'),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(24),
+        children: [
+          Text(
+            'Welcome, ${user?.displayName ?? 'Learner'}',
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          const SizedBox(height: 12),
+          const Card(
+            child: Padding(
+              padding: EdgeInsets.all(20),
+              child: Text(
+                'Phase 1 is active. Secure session restoration, routing, '
+                'private sign-in, and the learner home shell are ready.',
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+===== FILE: lib/features/home/presentation/routes/home_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class HomeRoutes {}
+
+
+===== FILE: lib/features/home/presentation/states/home_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class HomeViewState {}
+
+
+===== FILE: lib/features/home/presentation/widgets/current_plan_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class CurrentPlanCard {}
+
+
+===== FILE: lib/features/home/presentation/widgets/next_action_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class NextActionCard {}
+
+
+===== FILE: lib/features/home/presentation/widgets/progress_summary_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ProgressSummaryCard {}
+
+
+===== FILE: lib/features/home/presentation/widgets/synchronization_summary_card.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SynchronizationSummaryCard {}
+
+
+===== FILE: lib/features/learner_profile/application/controllers/learner_profile.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerProfileController {}
+
+
+===== FILE: lib/features/learner_profile/application/use_cases/load_learner_profile.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LoadLearnerProfile {}
+
+
+===== FILE: lib/features/learner_profile/application/use_cases/update_learner_profile.dart =====
+
+// Structural placeholder only. No business logic.
+
+class UpdateLearnerProfile {}
+
+
+===== FILE: lib/features/learner_profile/data/data_sources/learner_profile_local_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class LearnerProfileLocalDataSource {}
+
+
+===== FILE: lib/features/learner_profile/data/data_sources/learner_profile_remote_data_source.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class LearnerProfileRemoteDataSource {}
+
+
+===== FILE: lib/features/learner_profile/data/models/learner_profile.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerProfileModel {}
+
+
+===== FILE: lib/features/learner_profile/data/repositories/learner_profile_repository_adapter.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerProfileRepositoryAdapter {}
+
+
+===== FILE: lib/features/learner_profile/domain/entities/learner_profile.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerProfile {}
+
+
+===== FILE: lib/features/learner_profile/domain/repositories/learner_profile.dart =====
+
+// Structural placeholder only. No business logic.
+
+abstract class LearnerProfileRepository {}
+
+
+===== FILE: lib/features/learner_profile/domain/value_objects/accessibility_preferences.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum AccessibilityPreferences { unspecified }
+
+
+===== FILE: lib/features/learner_profile/domain/value_objects/language_background.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum LanguageBackground { unspecified }
+
+
+===== FILE: lib/features/learner_profile/domain/value_objects/learner_preferences.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum LearnerPreferences { unspecified }
+
+
+===== FILE: lib/features/learner_profile/domain/value_objects/occupational_background.dart =====
+
+// Structural placeholder only. No business logic.
+
+enum OccupationalBackground { unspecified }
+
+
+===== FILE: lib/features/learner_profile/learner_profile.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerProfileFeature {}
+
+
+===== FILE: lib/features/learner_profile/presentation/controllers/learner_profile_page_controller.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerProfilePageController {}
+
+
+===== FILE: lib/features/learner_profile/presentation/pages/learner_profile_edit_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerProfileEditPage {}
+
+
+===== FILE: lib/features/learner_profile/presentation/pages/learner_profile_page.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerProfilePage {}
+
+
+===== FILE: lib/features/learner_profile/presentation/routes/learner_profile_routes.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerProfileRoutes {}
+
+
+===== FILE: lib/features/learner_profile/presentation/states/learner_profile_view_state.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerProfileViewState {}
+
+
+===== FILE: lib/features/learner_profile/presentation/widgets/accessibility_preferences_section.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AccessibilityPreferencesSection {}
+
+
+===== FILE: lib/features/learner_profile/presentation/widgets/language_background_section.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LanguageBackgroundSection {}
+
+
+===== FILE: lib/features/learner_profile/presentation/widgets/occupational_background_section.dart =====
+
+// Structural placeholder only. No business logic.
+
+class OccupationalBackgroundSection {}
 

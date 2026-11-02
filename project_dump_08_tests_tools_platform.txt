@@ -1,3 +1,370 @@
 PROJECT ROOT: C:\Users\ext.fadiguzel\OneDrive - Vibracoustic\Masaüstü\english_acquisition_app_phase1_integrated_final\english_acquisition_app_phase1_integrated
-GENERATED: 2026-11-02 16:07:59
+GENERATED: 2026-11-02 16:18:34
+
+
+===== FILE: assets/localization/app_en.arb =====
+
+{}
+
+
+===== FILE: assets/localization/app_tr.arb =====
+
+{}
+
+
+===== FILE: docs/architecture/dependency_rules.md =====
+
+# Flutter Client Dependency Rules
+
+RULE D-001: app may depend on core, shared and feature public interfaces.
+RULE D-002: app owns application composition, routing, theme, localization and startup.
+RULE D-003: core may not depend on app or features.
+RULE D-004: shared may depend on core only when technically necessary.
+RULE D-005: shared may not depend on any feature.
+RULE D-006: features may depend on core and shared.
+RULE D-007: features may not import another feature's data, domain or presentation internals.
+RULE D-008: cross-feature access must use a shared contract, app-level coordinator or backend-owned state.
+RULE D-009: presentation may depend on application and presentation-safe domain types.
+RULE D-010: presentation may not call local or remote data sources directly.
+RULE D-011: application may depend on domain abstractions.
+RULE D-012: application may depend on shared kernel identifiers and core-neutral contracts.
+RULE D-013: domain may not depend on Flutter widgets, plugins, app, data or presentation.
+RULE D-014: data may depend on domain and application abstractions.
+RULE D-015: data may depend on core networking, persistence and synchronization.
+RULE D-016: data transport models may not escape into presentation.
+RULE D-017: repository interfaces belong to the feature that consumes them.
+RULE D-018: repository implementations remain in the owning feature's data layer.
+RULE D-019: backend-authoritative state must not be recalculated in the client.
+RULE D-020: Assessment may produce locally pending responses but not accepted Evidence.
+RULE D-021: Evidence is read-only in the client; correction is submitted as a command.
+RULE D-022: Readiness is displayed by the client but calculated by the backend.
+RULE D-023: Recommendation may propose an action but may not mutate Learning Plan locally.
+RULE D-024: Voice may capture and upload recordings but may not declare pronunciation mastery.
+RULE D-025: Simulation may retain an interruption checkpoint but may not own authoritative Supplier state.
+RULE D-026: offline records must declare local, queued, submitted, accepted, rejected or conflicting status.
+RULE D-027: retryable submissions must preserve the same operation identifier.
+RULE D-028: one state-management framework shall be used across all features.
+RULE D-029: one navigation framework shall be used across the application.
+RULE D-030: one local relational persistence system shall own structured offline records.
+RULE D-031: credentials must use secure storage and may not use ordinary preferences.
+RULE D-032: raw audio must remain in temporary file storage and follow retention rules.
+RULE D-033: one user's cached, draft and media data must be scoped by LearnerId.
+RULE D-034: feature barrel files may export only the feature's approved public surface.
+RULE D-035: empty abstraction layers and pass-through interfaces are prohibited in implementation; placeholders are permitted only in this physical skeleton.
+RULE D-036: new shared utilities require at least two real consumers.
+RULE D-037: new cross-feature dependencies require an architecture decision record.
+RULE D-038: direct AI-provider and voice-provider access from the Flutter client is prohibited.
+RULE D-039: provider credentials must never be packaged in the Flutter application.
+RULE D-040: all consequential submissions must receive backend acceptance before being shown as finalized.
+
+
+===== FILE: docs/architecture/feature_boundaries.md =====
+
+# Feature Boundaries
+
+
+===== FILE: docs/architecture/module_ownership.md =====
+
+# Module Ownership
+
+
+===== FILE: docs/architecture/shared_kernel_rules.md =====
+
+# Shared Kernel Rules
+
+
+===== FILE: docs/decisions/adr_001_state_management.md =====
+
+# Adr 001 State Management
+
+
+===== FILE: docs/decisions/adr_002_navigation.md =====
+
+# Adr 002 Navigation
+
+
+===== FILE: docs/decisions/adr_003_local_persistence.md =====
+
+# Adr 003 Local Persistence
+
+
+===== FILE: docs/decisions/adr_004_voice_recording.md =====
+
+# Adr 004 Voice Recording
+
+
+===== FILE: docs/offline/conflict_rules.md =====
+
+# Conflict Rules
+
+
+===== FILE: docs/offline/local_data_classes.md =====
+
+# Local Data Classes
+
+
+===== FILE: docs/offline/synchronization_rules.md =====
+
+# Synchronization Rules
+
+
+===== FILE: docs/packages/package_register.md =====
+
+# Package Register
+
+
+===== FILE: docs/testing/accessibility_checklist.md =====
+
+# Accessibility Checklist
+
+
+===== FILE: docs/testing/integration_test_scope.md =====
+
+# Integration Test Scope
+
+
+===== FILE: docs/testing/testing_strategy.md =====
+
+# Testing Strategy
+
+
+===== FILE: integration_test/assessment_submission_flow_test.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentSubmissionFlowTest {}
+
+
+===== FILE: integration_test/authentication_flow_test.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AuthenticationFlowTest {}
+
+
+===== FILE: integration_test/data_export_flow_test.dart =====
+
+// Structural placeholder only. No business logic.
+
+class DataExportFlowTest {}
+
+
+===== FILE: integration_test/evidence_inspection_flow_test.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceInspectionFlowTest {}
+
+
+===== FILE: integration_test/interrupted_session_recovery_test.dart =====
+
+// Structural placeholder only. No business logic.
+
+class InterruptedSessionRecoveryTest {}
+
+
+===== FILE: integration_test/learning_session_flow_test.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearningSessionFlowTest {}
+
+
+===== FILE: integration_test/local_data_cleanup_flow_test.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LocalDataCleanupFlowTest {}
+
+
+===== FILE: integration_test/offline_practice_sync_test.dart =====
+
+// Structural placeholder only. No business logic.
+
+class OfflinePracticeSyncTest {}
+
+
+===== FILE: integration_test/recommendation_response_flow_test.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecommendationResponseFlowTest {}
+
+
+===== FILE: integration_test/simulation_flow_test.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationFlowTest {}
+
+
+===== FILE: integration_test/user_switch_isolation_test.dart =====
+
+// Structural placeholder only. No business logic.
+
+class UserSwitchIsolationTest {}
+
+
+===== FILE: integration_test/voice_submission_flow_test.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceSubmissionFlowTest {}
+
+
+===== FILE: test/authentication_phase1_test.dart =====
+
+import 'package:english_acquisition_app/core/security/secure_session_store.dart';
+import 'package:english_acquisition_app/features/authentication/data/repositories/authentication_repository_adapter.dart';
+import 'package:english_acquisition_app/features/authentication/data/secure_storage/flutter_credential_store.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+final class MemorySecureSessionStore implements SecureSessionStore {
+  String? value;
+
+  @override
+  Future<void> clear() async => value = null;
+
+  @override
+  Future<String?> readUserId() async => value;
+
+  @override
+  Future<void> writeUserId(String userId) async => value = userId;
+}
+
+void main() {
+  test('private user signs in, restores session, and signs out', () async {
+    final store = MemorySecureSessionStore();
+    final repository = AuthenticationRepositoryAdapter(
+      FlutterCredentialStore(store),
+    );
+    final user = await repository.signIn(
+      password: 'change-me-now',
+      userName: 'furkan',
+    );
+    expect(user.id, 'learner-1');
+    expect((await repository.restore())?.id, 'learner-1');
+    await repository.signOut();
+    expect(await repository.restore(), isNull);
+  });
+}
+
+
+===== FILE: test/support/factories/assessment_factory.dart =====
+
+// Structural placeholder only. No business logic.
+
+class AssessmentFactory {}
+
+
+===== FILE: test/support/factories/evidence_factory.dart =====
+
+// Structural placeholder only. No business logic.
+
+class EvidenceFactory {}
+
+
+===== FILE: test/support/factories/learner_factory.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LearnerFactory {}
+
+
+===== FILE: test/support/factories/simulation_factory.dart =====
+
+// Structural placeholder only. No business logic.
+
+class SimulationFactory {}
+
+
+===== FILE: test/support/factories/voice_factory.dart =====
+
+// Structural placeholder only. No business logic.
+
+class VoiceFactory {}
+
+
+===== FILE: test/support/fakes/fake_api_client.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FakeApiClient {}
+
+
+===== FILE: test/support/fakes/fake_audio_player.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FakeAudioPlayer {}
+
+
+===== FILE: test/support/fakes/fake_audio_recorder.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FakeAudioRecorder {}
+
+
+===== FILE: test/support/fakes/fake_clock.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FakeClock {}
+
+
+===== FILE: test/support/fakes/fake_connectivity_monitor.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FakeConnectivityMonitor {}
+
+
+===== FILE: test/support/fakes/fake_local_database.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FakeLocalDatabase {}
+
+
+===== FILE: test/support/fakes/fake_secure_value_store.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FakeSecureValueStore {}
+
+
+===== FILE: tool/content_validator.dart =====
+
+// Structural placeholder only. No business logic.
+
+class ContentValidator {}
+
+
+===== FILE: tool/fixture_generator.dart =====
+
+// Structural placeholder only. No business logic.
+
+class FixtureGenerator {}
+
+
+===== FILE: tool/localization_validator.dart =====
+
+// Structural placeholder only. No business logic.
+
+class LocalizationValidator {}
+
+
+===== FILE: tool/package_audit.dart =====
+
+// Structural placeholder only. No business logic.
+
+class PackageAudit {}
+
+
+===== FILE: tool/recorded_response_validator.dart =====
+
+// Structural placeholder only. No business logic.
+
+class RecordedResponseValidator {}
 
